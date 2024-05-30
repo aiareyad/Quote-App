@@ -242,10 +242,10 @@ document.getElementById('copyBtn').addEventListener('click', function() {
     
         if (clickCount === 5) {
 
-            targetDiv.classList.replace('d-none', 'd-block');
+            // targetDiv.classList.replace('d-none', 'd-block');
         }else if (clickCount === 10){
 
-            targetDiv2.classList.replace('d-none', 'd-block');
+            // targetDiv2.classList.replace('d-none', 'd-block');
 
         }
     
