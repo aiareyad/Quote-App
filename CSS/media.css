@@ -39,16 +39,6 @@
         transform: scale(1, 1);
     }
 
-    .clicks {
-
-        display:none;
-    }
-
-    .clicks10{
-
-        display: none;
-    }
-
     .default-bg p {
         font-family: "Lancelot", serif;
         color: rgba(193, 175, 133);
@@ -132,6 +122,17 @@
         animation: refOpacity 2s 1s 1 forwards;
     }
 
+    .clicks {
+
+        position: absolute;
+        margin: 0 auto;
+        bottom: 20px;
+        transition: right 1s ease-out;
+        overflow: hidden;
+        animation: clickshow 3s forwards;
+        opacity: 0;
+    }
+
     #clicks12 {
         position: absolute;
         top: 85%;
@@ -169,5 +170,39 @@
         }
     }
     
-    
-}
+    @keyframes clickshow {
+        
+        0% {
+            opacity: 0;
+            bottom: 95px;
+        }
+        
+        50% {
+            opacity: 1;
+            bottom: 100px;
+        }
+        60% {
+            opacity: 1;
+            bottom: 55px;
+        }
+        70% {
+            opacity: 1;
+            bottom: 60px;
+        }
+        80% {
+            opacity: 0;
+            bottom: 65px;
+        }
+        85% {
+            opacity: 0;
+            bottom: 75px;
+        }
+        90% {
+            opacity: 0;
+            bottom: 80px;
+        }
+        100% {
+            opacity: 0;
+            bottom: 50px;
+        }
+    }
