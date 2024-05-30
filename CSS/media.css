@@ -3,6 +3,52 @@
 @media screen and (min-width: 320px)  and (max-width: 1024px) {
 
 
+    .first-bg button {
+        color: #C1BB94;
+        background-color: rgba(0, 0, 0, 0.6) !important;
+        font-size: 20px;
+        font-family: "Lancelot", serif;
+        transition: transform 0.5s;
+        border: 1px solid #C1BB94;
+        padding: 10px 20px;
+        border-radius: 30px;
+        opacity: 0;
+        animation: opacity 3s forwards;
+        margin-top: -50px;
+    }
+}
+
+    #another {
+        background-color: transparent;
+        border: none;
+        color: #C1BB94;
+        font-size: 15px;
+        font-family: "Lancelot", serif;
+        outline: none;
+        order: 2;
+        transform: scale(1, 1);
+        transition: all 0.5s ease;
+        text-shadow: #000000 1px 1px 1px, #000000 1px 1px 1px, #000000 1px 1px 1px;
+    }
+
+    #another:hover{
+
+        color: #d7d4c3;
+        cursor: pointer;
+        transition: all 0.5s ease;
+        transform: scale(1, 1);
+    }
+
+    .clicks {
+
+        display:none;
+    }
+
+    .clicks10{
+
+        display: none;
+    }
+
     .default-bg p {
         font-family: "Lancelot", serif;
         color: rgba(193, 175, 133);
@@ -120,43 +166,6 @@
             opacity: 1;
             left: 50%;
             top: 20%;
-        }
-    }
-
-    @keyframes clickshow {
-        
-        0% {
-            opacity: 0;
-            bottom: 175px;
-        }
-        50% {
-            opacity: 1;
-            bottom: 180px;
-        }
-        
-        60% {
-            opacity: 1;
-            bottom: 180px;
-        }
-        70% {
-            opacity: 1;
-            bottom: 180px;
-        }
-        80% {
-            opacity: 0;
-            bottom: 170px;
-        }
-        85% {
-            opacity: 0;
-            bottom: 175px;
-        }
-        90% {
-            opacity: 0;
-            bottom: 160px;
-        }
-        100% {
-            opacity: 0;
-            bottom: 50px;
         }
     }
     
