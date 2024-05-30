@@ -1,0 +1,645 @@
+
+/* Start Of Quote App */
+html{
+
+    background-color: #000000;
+}
+*{
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    overflow: hidden;
+}
+
+body{
+
+    height: 100vh;
+    background-color: #000000;
+}
+
+.first-bg{
+
+    background-image: url(../imgs/first-bg.jpg);
+    height: 100vh;
+    background-position: center center;
+    background-size: cover;
+    opacity: 1;
+    z-index: 3;
+    background-color: #070707;
+}
+
+.first-bg .light{
+
+    opacity: 0;
+    animation: appear 3s infinite;
+}
+
+.first-bg button{
+    
+    color: #C1BB94;
+    background-color: rgba(0, 0, 0, 0.6) !important;
+    font-size: 25px;
+    font-family: "Lancelot", serif;
+    transition: transform 0.5s;
+    border: 1px solid #C1BB94;
+    padding: 10px 20px;
+    border-radius: 30px;
+    opacity: 0;
+    animation: opacity 3s forwards;
+}
+
+@keyframes appear {
+
+    0%{
+
+        opacity: 1;
+    }
+
+    50%{
+
+        opacity: 0.5;
+    }
+    100%{
+
+        opacity: 1;
+    }}
+
+.disappear{
+
+    animation: 2s forwards disappear;
+    display: none;
+}
+
+@keyframes disappear {
+
+    0%{
+
+        opacity: 0;
+    }
+
+    100%{
+
+        display: none;
+    }
+}
+
+.second-bg{
+
+    background-image: url(../imgs/second-bg.jpg);
+    height: 100vh;
+    background-position: center center;
+    background-size: cover;
+    opacity: 1;
+    z-index: 2;
+    background-color: #070707;
+}
+
+.second-bg button{
+
+    color: #C1BB94;
+    background-color: rgba(0, 0, 0, 0.6) !important;
+    font-size: 20px;
+    font-family: "Lancelot", serif;
+    transition: transform 0.5s;
+    border: 1px solid #C1BB94;
+    padding: 10px 20px;
+    border-radius: 30px;
+    opacity: 0;
+    animation: opacity 3s forwards;
+}
+
+.third-bg{
+
+    background-image: url(../imgs/third-bg.jpg);
+    height: 100vh;
+    background-position: center center;
+    background-size: cover;
+    opacity: 1;
+    z-index: 1;
+    background-color: #070707;
+}
+
+.third-bg button{
+
+    color: #C1BB94;
+    background-color: rgba(0, 0, 0, 0.6) !important;
+    font-size: 20px;
+    font-family: "Lancelot", serif;
+    transition: transform 0.5s;
+    border: 1px solid #C1BB94;
+    padding: 10px 20px;
+    border-radius: 30px;
+    opacity: 0;
+    animation: opacity 3s forwards;
+}
+
+.default-bg{
+
+    background-image: url(../imgs/Background.jpg);
+    height: 100vh;
+    background-position: center center;
+    background-size: cover;
+    opacity: 1;
+    z-index: 0;
+    background-color: #070707;
+}
+
+.default-bg p{
+
+    font-family: "Lancelot", serif;
+    color:rgba(193, 175, 133);
+    font-size: 60px;
+    opacity: 0.6;
+    text-shadow: #000000 2px 2px 2px,
+    #000000 2px 2px 2px,
+    #000000 2px 2px 2px;
+    animation: opacity 1s forwards;
+}
+
+.default-bg button{
+
+    color: #C1BB94;
+    background-color: rgba(0, 0, 0, 0.6) !important;
+    font-size: 30px;
+    font-family: "lancelot", serif;
+    transition: transform 0.5s;
+    border: 1px solid #C1BB94;
+    padding: 10px 20px;
+    border-radius: 30px;
+    opacity: 0;
+    animation: opacity 1s forwards;
+    animation-delay: 2s;
+}
+
+.header {
+
+    background-image: linear-gradient(rgba(0, 0, 0, 0),rgba(0, 0, 0, 1)), url(../imgs/Background.jpg);
+    height: 100vh;
+    background-position: center center;
+    background-size: cover;
+}
+
+@keyframes opacity {
+
+    100%{
+
+        opacity: 1;
+    }
+    
+}
+
+.header .header-text h1{
+
+    font-family: "Lancelot", serif;
+    color:rgba(193, 175, 133);
+    font-size: 130px;
+    opacity: 0.6;
+    text-shadow: #000000 2px 2px 2px,
+    #000000 2px 2px 2px,
+    #000000 2px 2px 2px;
+}
+
+
+.card h3{
+
+    font-family: "Bodoni Moda", serif;
+    color: #C1BB94;
+    
+}
+
+.card h3::after {
+
+    content: '';
+    background-color: #C1BB94;
+    height: 0.5px;
+    width: 150px;
+    display: block;
+    position: relative;
+    margin: 15px auto;
+
+}
+
+.quote-card{
+
+    background-color: transparent transparent;
+}
+
+.card{
+
+    background-color: rgba(0, 0, 0, 0.5)!important;
+    transform: rotateY(180deg) scale(0.5, 0.5);
+    animation: forwards flip 1s; 
+    transition: transform 0.5s, opacity 0.5s; 
+}
+
+/* .border-animation{
+
+    animation: border 1s forwards;
+}
+
+@keyframes border {
+
+    0%{
+
+        border-image: linear-gradient(to right, #C1BB94, transparent, transparent, transparent) 1 !important;
+    }
+
+    25%{
+
+        border-image: linear-gradient(to right, transparent, #C1BB94, transparent, transparent) 1 !important;
+    }
+
+    50%{
+
+        border-image: linear-gradient(to right, transparent, transparent, #C1BB94, transparent) 1 !important;
+    }
+
+    75%{
+
+        border-image: linear-gradient(to right, transparent, transparent, transparent, #C1BB94) 1 !important;
+    }
+
+    100%{
+
+        border-image: linear-gradient(to right, #C1BB94, transparent, transparent, transparent,) 1 !important; 
+    }
+
+} */
+
+@keyframes flip {
+    
+    100%{
+
+        transform: rotateY(0deg) scale(1, 1);
+    }
+}
+
+.card.transition {
+    transform: scale(1.05);
+    opacity: 0.8;
+    text-shadow: #000000 1px 1px 1px, #000000 1px 1px 1px, #000000 1px 1px 1px;
+}
+
+.w-quotation1{
+
+    font-size: 20px;
+    color: #ffffff44;
+}
+
+.w-quotation2{
+
+    font-size: 20px;
+    color: #ffffff44;
+}
+
+.quotes span{
+
+    font-size: 20px;
+    color: #C1BB94;
+    margin: 0 10px;
+    transition: all 0.5s ease;
+    text-shadow: #000000 1px 1px 1px, #000000 1px 1px 1px, #000000 1px 1px 1px;
+}
+
+.quotes p{
+
+    font-size: 20px;
+    color: #ffffff44;
+    transition: all 0.5s ease;
+}
+
+#generateButton {
+   
+    background-color: transparent;
+    border: none;
+    color: #C1BB94;
+    font-size: 50px;
+    font-family: "Lancelot", serif;
+    outline: none;
+    order: 2;
+    text-shadow: #000000 1px 1px 1px, #000000 1px 1px 1px, #000000 1px 1px 1px;
+}
+
+#generateButton:focus{
+
+    transform: rotateY(-180deg);
+    animation: show 1.5s forwards;
+}
+
+
+@keyframes show{
+
+    0%{
+
+        transform: rotateY(0deg);
+        opacity: 0;
+    }
+
+    100%{
+
+        transform: rotateY(0deg);
+        opacity: 1;
+    }
+}
+
+#copyBtn{
+
+    background-color: transparent;
+    border: none;
+    color: #C1BB94;
+    font-size: 20px;
+    outline: none;
+    order: 1;
+    transform: scale(1,1);
+    text-shadow: #000000 1px 1px 1px, #000000 1px 1px 1px, #000000 1px 1px 1px;
+}
+
+#another{
+
+    background-color: transparent;
+    border: none;
+    color: #C1BB94;
+    font-size: 20px;
+    font-family: "Lancelot", serif;
+    outline: none;
+    order: 2;
+    transform: scale(1,1);
+    transition: all 0.5s ease;
+    text-shadow: #000000 1px 1px 1px, #000000 1px 1px 1px, #000000 1px 1px 1px;
+}
+
+#copyBtn:hover{
+
+    color: #d7d4c3;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+#copyBtn:focus{
+
+    transform: scale(1.6);
+    transition: all 0.5s ease;
+}
+#another:hover{
+
+    color: #d7d4c3;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    transform: scale(1.2);
+}
+
+#copied {
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #C1BB94;
+    background-color: rgba(0, 0, 0, 0.6) !important;
+    font-size: 20px;
+    font-family: "Lancelot", serif;
+    transition: transform 0.5s;
+    border: 1px solid #C1BB94;
+    padding: 10px 20px;
+    border-radius: 30px;
+}
+
+.animate{
+
+    animation: copied 2s forwards;
+}
+
+@keyframes copied {
+    
+    0%{
+    
+        opacity: 1;    
+    }
+
+    100%{
+        
+        top: 1%;
+        left: 50%;
+        opacity: 0;    
+    }
+}
+
+.clicks img{
+
+    width: 50px;
+    padding-left: 10px;
+}
+
+.clicks span{
+
+    color: #C1BB94;
+    font-family: "Lancelot", serif;
+    font-size: 20px;
+
+}
+
+.clicks {
+    position: absolute;
+    margin: 0 auto;
+    bottom: 100px;
+    transition: right 1s ease-out;
+    overflow: hidden;
+    animation: clickshow 3s forwards;
+    opacity: 0;
+}
+
+.clicks10 {
+    position: absolute;
+    margin: 0 auto;
+    bottom: 100px;
+    transition: right 1s ease-out;
+    overflow: hidden;
+    animation: clickshow 3s forwards;
+    opacity: 0;
+}
+
+.clicks10 img{
+
+    width: 50px;
+    padding-left: 10px;
+}
+
+.clicks10 span{
+
+    color: #C1BB94;
+    font-family: "Lancelot", serif;
+    font-size: 20px;
+}
+
+@keyframes clickshow {
+
+    0%{
+
+        opacity: 0;
+        bottom: 175px;
+    }
+
+
+    50%{
+
+        opacity: 1;
+        bottom: 180px;
+    }
+
+    60%{
+
+        opacity: 1;
+        bottom: 180px;
+    }
+
+    70%{
+
+        opacity: 1;
+        bottom: 180px;
+    }
+
+    80%{
+
+        opacity: 0;
+        bottom: 170px;
+    }
+
+    85%{
+
+        opacity: 0;
+        bottom: 175px;
+    }
+
+    90%{
+
+        opacity: 0;
+        bottom: 160px;
+    }
+
+    100%{
+
+        opacity: 0;
+        bottom: 130px;
+    }
+}
+
+.clicks11 {
+
+    margin: 0 auto;
+    bottom: 100px;
+    animation: clickshow11 3s forwards;
+}
+
+.clicks11 img {
+  
+    width: 50px;
+    top: 51%;
+    margin: 0 auto;
+    position: absolute;
+    transform: translate(-50%, -50%);
+}
+
+.clicks11 span {
+
+    color: #C1BB94;
+    font-family: "Lancelot", serif;
+    font-size: 14px;
+    position: absolute;
+    bottom: -90px;
+    left: 35px;
+    width: 120px;
+}
+
+@keyframes clickshow11 {
+
+    0%{
+
+        opacity: 0;
+    }
+
+    100%{
+
+        opacity: 1;
+    }
+}
+
+
+#clicks12{
+
+    position: absolute;
+    top: 85%;
+    right: -700px;
+    transform: translate(-50%, -50%);
+    color: #C1BB94;
+    background-color: rgba(0, 0, 0, 0.6) !important;
+    font-family: "Lancelot", serif;
+    transition: transform 0.5s;
+    border: 1px solid #C1BB94;
+    padding: 10px 20px;
+    border-radius: 20px  0 0 20px ;
+    max-width: 400px;
+    animation: slideRight 1s forwards;
+    font-size: 20px;
+}
+
+.clicks12 img{
+
+    width: 35px;
+    padding-left: 10px;
+}
+
+@keyframes slideRight {
+
+
+    100%{
+
+        right: -260px;
+    }
+}
+
+#refresh {
+
+    position: absolute;
+    top: 85%;
+    left: 90%;
+    transform: translate(-50%, -50%);
+    color: #C1BB94;
+    background-color: rgba(0, 0, 0, 0.6) !important;
+    font-size: 20px;
+    font-family: "Lancelot", serif;
+    transition: transform 0.5s;
+    border: 1px solid #C1BB94;
+    padding: 10px 20px;
+    border-radius: 30px;
+    cursor: pointer;
+    opacity: 0;
+    /* animation: refOpacity 2s forwards; */
+    animation: refOpacity 2s 1s 1  forwards;
+}
+
+@keyframes refOpacity {
+
+    0%{
+
+        opacity: 0;
+        left: 90%;
+        top: 85%;
+    }
+
+    50%{
+
+        opacity: 1;
+        left: 50%;
+        top: 85%;
+    }
+
+    100%{
+
+        opacity: 1;
+        left: 50%;
+        top: 72%;
+    }
+}
+
