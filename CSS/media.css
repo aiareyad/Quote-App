@@ -134,8 +134,9 @@
     }
 
     #clicks12 {
+        
         position: absolute;
-        top: 85%;
+        top: 90%;
         right: -700px;
         transform: translate(-50%, -50%);
         color: #C1BB94;
